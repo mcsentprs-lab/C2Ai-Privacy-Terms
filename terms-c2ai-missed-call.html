@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions — C2Ai Solutions Missed Call Text Back Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0e17;
+      --surface: #111827;
+      --border: #1e2d40;
+      --accent: #3b8cf8;
+      --accent-dim: rgba(59, 140, 248, 0.12);
+      --text: #e2e8f0;
+      --text-muted: #64748b;
+      --text-dim: #94a3b8;
+      --chrome: #a8c4e8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(59,140,248,0.08) 0%, transparent 70%),
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.015) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.015) 40px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 40px 120px;
+    }
+
+    header {
+      margin-bottom: 64px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 48px;
+    }
+
+    .brand {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--chrome);
+    }
+
+    .meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .intro {
+      background: var(--accent-dim);
+      border: 1px solid rgba(59,140,248,0.2);
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+      font-size: 15px;
+      color: var(--text-dim);
+    }
+
+    section {
+      margin-bottom: 52px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      color: var(--chrome);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+    }
+
+    h2 .num {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-dim);
+      margin-bottom: 14px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 14px 0;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: var(--text-dim);
+      padding: 8px 0 8px 24px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: 'DM Mono', monospace;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(59,140,248,0.3);
+      transition: border-color 0.2s;
+    }
+
+    a:hover { border-color: var(--accent); }
+
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin-top: 20px;
+    }
+
+    .callout .callout-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 52px 0;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      color: var(--text);
+    }
+
+    .footer-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: right;
+      line-height: 2;
+    }
+
+    @media (max-width: 600px) {
+      .wrapper { padding: 48px 24px 80px; }
+      footer { flex-direction: column; }
+      .footer-meta { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <header>
+      <div class="brand">C2Ai Solutions</div>
+      <h1>Terms &amp; Conditions<br /><em>Missed Call Text Back Service</em></h1>
+      <div class="meta">Effective Date: March 18, 2026 &nbsp;|&nbsp; Last Updated: March 18, 2026</div>
+    </header>
+
+    <div class="intro">
+      These Terms &amp; Conditions ("Terms") govern your access to and use of the Missed Call Text Back Service provided by C2Ai Solutions ("C2Ai," "we," "us," or "our"). By purchasing, activating, or using this service, you ("Client") agree to be bound by these Terms in full.
+    </div>
+
+    <!-- 1 -->
+    <section>
+      <h2><span class="num">01</span> Description of Service</h2>
+      <p>C2Ai Solutions provides a Missed Call Text Back Service that automatically sends an SMS message to callers who reach a business phone number and do not connect with a live person. The service is designed to acknowledge missed calls and initiate follow-up communication on behalf of the Client.</p>
+      <p>The service is delivered using third-party SMS infrastructure (Twilio, Inc.) and is subject to the availability and limitations of those platforms.</p>
+    </section>
+
+    <!-- 2 -->
+    <section>
+      <h2><span class="num">02</span> Eligibility &amp; Account Responsibility</h2>
+      <p>To use this service you must:</p>
+      <ul>
+        <li>Be a legally operating business entity or sole proprietor</li>
+        <li>Have the legal authority to send automated SMS messages to callers of your business line</li>
+        <li>Comply with all applicable federal, state, and local laws including the Telephone Consumer Protection Act (TCPA)</li>
+      </ul>
+      <p>You are solely responsible for ensuring your use of this service complies with applicable telecommunications laws. C2Ai Solutions provides the technology — compliance with messaging regulations is your responsibility as the Client.</p>
+    </section>
+
+    <!-- 3 -->
+    <section>
+      <h2><span class="num">03</span> Fees &amp; Payment</h2>
+      <p>Fees for this service are structured as follows:</p>
+
+      <div class="callout">
+        <div class="callout-label">Setup Fee</div>
+        <p>A one-time setup fee may be charged at the time of onboarding to cover configuration, integration, and initial deployment of the service. This fee is non-refundable once setup has been completed.</p>
+      </div>
+
+      <div class="callout" style="margin-top: 16px;">
+        <div class="callout-label">Monthly Subscription</div>
+        <p>Ongoing access to the service is billed on a monthly basis. Subscription fees are due at the start of each billing cycle. Failure to pay may result in suspension or termination of the service.</p>
+      </div>
+
+      <p style="margin-top: 20px;">All fees are stated at the time of purchase. C2Ai Solutions reserves the right to adjust pricing with reasonable advance notice. Continued use of the service after a pricing change constitutes acceptance of the new rates.</p>
+      <p>Additional charges from Twilio for SMS volume overages, if applicable, may be passed through to the Client.</p>
+    </section>
+
+    <!-- 4 -->
+    <section>
+      <h2><span class="num">04</span> Cancellation &amp; Refunds</h2>
+      <p>You may cancel your monthly subscription at any time. Cancellation takes effect at the end of the current billing period — we do not issue partial-month refunds.</p>
+      <p>One-time setup fees are non-refundable. If you cancel before the end of a trial period (where applicable), no charges will be assessed beyond what was agreed at signup.</p>
+      <p>C2Ai Solutions reserves the right to terminate service immediately and without refund in the event of a material violation of these Terms.</p>
+    </section>
+
+    <!-- 5 -->
+    <section>
+      <h2><span class="num">05</span> Acceptable Use</h2>
+      <p>You agree not to use this service to:</p>
+      <ul>
+        <li>Send messages that are harassing, threatening, deceptive, or unlawful</li>
+        <li>Transmit spam or unsolicited commercial messages in violation of applicable law</li>
+        <li>Impersonate any person or entity, or misrepresent your affiliation with any business</li>
+        <li>Violate the rights of any third party, including privacy and intellectual property rights</li>
+        <li>Circumvent or interfere with the technical operation of the service or Twilio's platform</li>
+      </ul>
+      <p>Violation of this section may result in immediate suspension or termination of your account without refund.</p>
+    </section>
+
+    <!-- 6 -->
+    <section>
+      <h2><span class="num">06</span> Service Availability</h2>
+      <p>C2Ai Solutions does not guarantee uninterrupted or error-free service. The Missed Call Text Back Service depends on third-party infrastructure including Twilio, carrier networks, and telephony providers. Outages, delays, or failures by those providers are outside our control.</p>
+      <p>We do not offer a Service Level Agreement (SLA) or uptime guarantee. We will make reasonable efforts to maintain service availability and to communicate planned maintenance when possible.</p>
+    </section>
+
+    <!-- 7 -->
+    <section>
+      <h2><span class="num">07</span> Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, C2Ai Solutions shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use this service — including but not limited to lost revenue, missed business opportunities, or claims by third parties resulting from automated messages sent on your behalf.</p>
+      <p>Our total liability to you for any claim arising under these Terms shall not exceed the total fees paid by you to C2Ai Solutions in the three (3) months preceding the event giving rise to the claim.</p>
+    </section>
+
+    <!-- 8 -->
+    <section>
+      <h2><span class="num">08</span> TCPA &amp; Regulatory Compliance</h2>
+      <p>The Client is solely responsible for compliance with the Telephone Consumer Protection Act (TCPA), the CAN-SPAM Act, applicable state telemarketing laws, and any other regulations governing automated messaging.</p>
+      <p>By using this service, you represent and warrant that you have the legal right to send automated SMS messages to the recipients who will receive them, and that your use of this service does not violate any applicable law.</p>
+      <p>C2Ai Solutions assumes no liability for regulatory violations, fines, or legal actions arising from the Client's use of the service.</p>
+    </section>
+
+    <!-- 9 -->
+    <section>
+      <h2><span class="num">09</span> Intellectual Property</h2>
+      <p>All software, systems, workflows, and technology underlying the Missed Call Text Back Service are the intellectual property of C2Ai Solutions or its licensors. Nothing in these Terms grants you ownership of or license to any C2Ai intellectual property beyond what is necessary to use the service as described.</p>
+      <p>You retain ownership of any content, messaging copy, or business information you provide to configure the service.</p>
+    </section>
+
+    <!-- 10 -->
+    <section>
+      <h2><span class="num">10</span> Modifications to the Service or Terms</h2>
+      <p>C2Ai Solutions reserves the right to modify, suspend, or discontinue the service at any time with reasonable notice. We also reserve the right to update these Terms. When we do, the "Last Updated" date at the top of this page will reflect the change.</p>
+      <p>Continued use of the service after updated Terms are posted constitutes your acceptance of the revised Terms.</p>
+    </section>
+
+    <!-- 11 -->
+    <section>
+      <h2><span class="num">11</span> Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in Texas.</p>
+    </section>
+
+    <!-- 12 -->
+    <section>
+      <h2><span class="num">12</span> Contact</h2>
+      <p>Questions about these Terms? Reach us at:</p>
+      <ul>
+        <li>Company: C2Ai Solutions</li>
+        <li>Email: <a href="mailto:legal@c2aisolutions.com">legal@c2aisolutions.com</a></li>
+        <li>Website: <a href="https://c2ai.xyz" target="_blank" rel="noopener">c2ai.xyz</a></li>
+      </ul>
+    </section>
+
+    <div class="divider"></div>
+
+    <footer>
+      <div class="footer-brand">C2Ai Solutions</div>
+      <div class="footer-meta">
+        Missed Call Text Back Service<br />
+        Terms &amp; Conditions &nbsp;·&nbsp; Effective March 18, 2026<br />
+        &copy; 2026 C2Ai Solutions. All rights reserved.
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
